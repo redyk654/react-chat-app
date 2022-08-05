@@ -24,7 +24,7 @@ export default function Login() {
                 </InputGroup>
                 <InputGroup>
                     <InputLeftElement mt={1} pointerEvents='none' children={<LockIcon w={6} h={6} />} />
-                    <Input placeholder="Password" type='password'  />
+                    <Input placeholder="Password" type={!passwordIsShow ? 'password' : 'text'}  />
                     <InputRightElement
                         onClick={() => setPasswordIsShow(!passwordIsShow)} 
                         _hover={{cursor: 'pointer'}} 

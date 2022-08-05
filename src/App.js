@@ -1,9 +1,12 @@
 import './App.css';
 import MainView from './components/MainView/MainView';
+import UserContextProvider from "./Context/UserIsLogin";
 
 function App() {
   return (
-    <MainView />
+    <UserContextProvider>
+      <MainView />
+    </UserContextProvider>
   );
 }
 
