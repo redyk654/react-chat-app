@@ -1,0 +1,17 @@
+.msg {
+    width: 100%;
+    padding: 5px;
+    border: '1px solid black';
+}
+
+.left-msg {
+    display: 'flex';
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.right-msg {
+    display: 'flex';
+    justify-content: flex-end;
+    align-items: flex-end;
+}

@@ -10,7 +10,6 @@ export default function MainView() {
         <Routes>
             <Route path='/' element={<Login />} />
             <Route element={<ProtectedRoutes />}>
-                {/* <Route path='/' element={<Login />} /> */}
                 <Route path='ChatView' element={<ChatView />} />
             </Route>
         </Routes>

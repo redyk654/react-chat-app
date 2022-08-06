@@ -3,7 +3,7 @@ import { Heading } from "@chakra-ui/react";
 
 export default function Header(props) {
   return (
-    <Heading as='h1' fontSize='4xl'>
+    <Heading as='h1' fontSize='5xl'>
         {props.children}
     </Heading>
   )
