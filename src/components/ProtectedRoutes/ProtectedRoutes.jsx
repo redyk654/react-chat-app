@@ -8,7 +8,7 @@ export default function ProtectedRoutes() {
     const { isAuth } = useContext(UserContext)
 
   return isAuth ? (
-    <Outlet /> 
+        <Outlet /> 
     ) : (
         <Navigate to='/' />
     )
