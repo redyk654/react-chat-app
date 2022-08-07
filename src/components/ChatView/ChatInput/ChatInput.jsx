@@ -14,14 +14,16 @@ export default function ChatInput(props) {
     const sendMsg = () => {
         if (props.msgIsTyping !== "") {
             const newMsg = {
-                id: userInfo.username,
+                id: props.id,
                 username: userInfo.username,
                 contain: props.msgIsTyping,
                 heure: new Date(Date.now()).getHours() + ':' + new Date(Date.now()).getMinutes(),
             };
 
-            props.setListOfMsg(prevState => [...prevState, newMsg]);
-            props.setMsgIsTyping('');            
+            props.socket.emit("send_msg", newMsg);
+            props.setListOfMsg([...props.listOfMsg, newMsg]);
+            props.setMsgIsTyping('');
+            props.setId(prevId => prevId + 1);
         }
     }
 
